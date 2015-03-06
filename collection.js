@@ -18,7 +18,7 @@ var collection = [
 	},
 	{
 		'id' : 'stand',
-		'title' 'The Stand',
+		'title' : 'The Stand',
 		'pl' : 'Bastion',
 		'year' : '1978',
 		'pages' : '1166'

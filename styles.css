@@ -1,0 +1,25 @@
+#list {
+	width: 1000px;
+}
+.title {
+	width: 300px;
+}
+tr {
+	height:50px;
+}
+td {
+	text-align: center;
+	border: solid  black;
+}
+table {
+	border-collapse: collapse;
+}
+.year {
+	width: 100px;
+}
+.category {
+	font-size: 30px;
+	font-weight: bold;
+	background-color: lightgrey;
+	color: red;
+}
