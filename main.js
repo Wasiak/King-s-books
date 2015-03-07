@@ -1,6 +1,9 @@
 var Book = function(id, title, pl, year, pages, link, nolink){
 	var tr = document.createElement('tr');
 	tr.id = id;
+	var pic = document.createElement('td');			// dodane 3 linijki  a komentarz na testy branchingu
+	tr.appendChild(pic);
+	pic.classList.add('year');
 	var t = document.createElement('td');
 	tr.appendChild(t);
 	t.classList.add('title');
