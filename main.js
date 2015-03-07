@@ -4,6 +4,12 @@ var Book = function(id, title, pl, year, pages, link, nolink){
 	var pic = document.createElement('td');			// dodane 3 linijki  a komentarz na testy branchingu
 	tr.appendChild(pic);
 	pic.classList.add('year');
+	if (nolink){
+		var img = document.createElement('img');
+		img.src = 'pics/' + id + '.jpg';
+		img.classList.add('thumb');
+		pic.appendChild(img);
+	}	
 	var t = document.createElement('td');
 	tr.appendChild(t);
 	t.classList.add('title');
