@@ -27,3 +27,7 @@ a {
 	text-decoration: none;
 	color: black;
 }
+.thumb {
+	height: 46px;
+	margin-top: 4px;
+}
