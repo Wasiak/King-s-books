@@ -11,7 +11,13 @@ var Book = function(id, title, pl, year, pages, link, nolink){
 		var img = document.createElement('img');
 		img.src = 'pics/' + id + '.jpg';
 		img.classList.add('thumb');
+		img.id = id;
 		pic.appendChild(img);
+		img.onclick = function(event){
+			var clicked = event.target;
+			var clickedId = clicked.id;
+			showBig(clickedId);
+		}
 		var tl = document.createElement('a');
 		t.appendChild(tl);
 		tl.href = link;
@@ -53,3 +59,20 @@ for (i = 0; i < collection.length; i++){
 	mainTable.appendChild(new Book(collection[i].id, collection[i].title, collection[i].pl, collection[i].year, collection[i].pages, collection[i].link, true));	
 }
 //  branch Big_thumb do pracy nad powiekszaniem kliknietych miniaturek okladek
+
+
+var showBig = function(id){
+	var lightbox = document.createElement('div');
+	lightbox.classList.add('lightbox');
+	document.body.appendChild(lightbox);
+	// var photo = document.createElement('div');
+	// lightbox.appendChild(photo);
+	var picture = document.createElement('img');
+	picture.src = 'pics/' + id + '.jpg'; 
+	picture.classList.add('picture');
+	lightbox.appendChild(picture);
+	lightbox.onclick = function(event){
+		event.preventDefault();
+		document.body.removeChild(lightbox);
+	}
+}
