@@ -3,17 +3,15 @@ var Book = function(id, title, pl, year, pages, link, nolink){
 	tr.id = id;
 	var pic = document.createElement('td');			
 	tr.appendChild(pic);
-	pic.classList.add('year');
+	pic.classList.add('year');	
+	var t = document.createElement('td');
+	tr.appendChild(t);
+	t.classList.add('title');
 	if (nolink){
 		var img = document.createElement('img');
 		img.src = 'pics/' + id + '.jpg';
 		img.classList.add('thumb');
 		pic.appendChild(img);
-	}	
-	var t = document.createElement('td');
-	tr.appendChild(t);
-	t.classList.add('title');
-	if (nolink){
 		var tl = document.createElement('a');
 		t.appendChild(tl);
 		tl.href = link;
@@ -26,6 +24,7 @@ var Book = function(id, title, pl, year, pages, link, nolink){
 		pli.href = link;
 		pli.innerHTML = pl;
 	} else {
+		pic.innerHTML = 'Cover';
 		t.innerHTML = title;
 		var p = document.createElement('td');
 		tr.appendChild(p);
