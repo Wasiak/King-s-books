@@ -1,7 +1,7 @@
 var Book = function(id, title, pl, year, pages, link, nolink){
 	var tr = document.createElement('tr');
 	tr.id = id;
-	var pic = document.createElement('td');			// dodane 3 linijki  a komentarz na testy branchingu
+	var pic = document.createElement('td');			
 	tr.appendChild(pic);
 	pic.classList.add('year');
 	if (nolink){
@@ -53,3 +53,4 @@ category.classList.add('category');
 for (i = 0; i < collection.length; i++){
 	mainTable.appendChild(new Book(collection[i].id, collection[i].title, collection[i].pl, collection[i].year, collection[i].pages, collection[i].link, true));	
 }
+//  branch Big_thumb do pracy nad powiekszaniem kliknietych miniaturek okladek
