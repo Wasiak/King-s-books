@@ -1,19 +1,23 @@
 var Book = function(id, title, pl, year, pages, link, nolink){
 	var tr = document.createElement('tr');
 	tr.id = id;
-	var pic = document.createElement('td');			// dodane 3 linijki  a komentarz na testy branchingu
+	var pic = document.createElement('td');			
 	tr.appendChild(pic);
-	pic.classList.add('year');
-	if (nolink){
-		var img = document.createElement('img');
-		img.src = 'pics/' + id + '.jpg';
-		img.classList.add('thumb');
-		pic.appendChild(img);
-	}	
+	pic.classList.add('year');	
 	var t = document.createElement('td');
 	tr.appendChild(t);
 	t.classList.add('title');
 	if (nolink){
+		var img = document.createElement('img');
+		img.src = 'pics/' + id + '.jpg';
+		img.classList.add('thumb');
+		img.id = id;
+		pic.appendChild(img);
+		img.onclick = function(event){
+			var clicked = event.target;
+			var clickedId = clicked.id;
+			showBig(clickedId);
+		}
 		var tl = document.createElement('a');
 		t.appendChild(tl);
 		tl.href = link;
@@ -26,6 +30,7 @@ var Book = function(id, title, pl, year, pages, link, nolink){
 		pli.href = link;
 		pli.innerHTML = pl;
 	} else {
+		pic.innerHTML = 'Cover';
 		t.innerHTML = title;
 		var p = document.createElement('td');
 		tr.appendChild(p);
@@ -52,4 +57,22 @@ category.classList.add('category');
 
 for (i = 0; i < collection.length; i++){
 	mainTable.appendChild(new Book(collection[i].id, collection[i].title, collection[i].pl, collection[i].year, collection[i].pages, collection[i].link, true));	
+}
+//  branch Big_thumb do pracy nad powiekszaniem kliknietych miniaturek okladek
+
+
+var showBig = function(id){
+	var lightbox = document.createElement('div');
+	lightbox.classList.add('lightbox');
+	document.body.appendChild(lightbox);
+	// var photo = document.createElement('div');
+	// lightbox.appendChild(photo);
+	var picture = document.createElement('img');
+	picture.src = 'pics/' + id + '.jpg'; 
+	picture.classList.add('picture');
+	lightbox.appendChild(picture);
+	lightbox.onclick = function(event){
+		event.preventDefault();
+		document.body.removeChild(lightbox);
+	}
 }
