@@ -72,9 +72,5 @@ var showBig = function(id){
 		event.preventDefault();
 		lightbox.classList.remove('visible');
 		picture.classList.remove('visible');
-		// nie musisz wyrzucac tego bo i tak ukrywasz obrazek przy wylaczeniu
-		// lightboxa a przy pokazaniu nowego lightboxa nadpisujesz src,
-		// tak wyglada lepiej bo nie mruga
-		//picture.src = '';
 	}
 }
