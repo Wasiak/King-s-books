@@ -64,6 +64,7 @@ for (i = 0; i < collection.length; i++){
 	var picture = document.createElement('img');
 	picture.classList.add('picture');
 	lightbox.appendChild(picture);
+
 var showBig = function(id){
 	picture.src = 'pics/' + id + '.jpg';
 	picture.classList.add('visible');
@@ -74,3 +75,29 @@ var showBig = function(id){
 		picture.classList.remove('visible');
 	}
 }
+
+//search bar
+var searchBar = document.createElement('input');
+searchBar.type = 'textbox';
+searchBar.classList.add('searchBar');
+searchBar.placeholder = 'Put Title here';
+document.body.appendChild(searchBar);
+
+var search = function(){
+	console.log('odpalam search');
+	var all = document.getElementsByTagName('tr');
+	for (i = 1; i < all.length; i++) {
+		all[i].classList.remove('dontShow');
+		var tl = all[i].getElementsByTagName('a')[0];
+		var pli = all[i].getElementsByTagName('a')[1];
+		if (searchBar.value){
+			console.log(tl.innerHTML.toLowerCase(), searchBar.value.toLowerCase(), tl.innerHTML.toLowerCase().indexOf(searchBar.value.toLowerCase()));
+			if(tl.innerHTML.toLowerCase().indexOf(searchBar.value.toLowerCase()) === -1 && 
+				pli.innerHTML.toLowerCase().indexOf(searchBar.value.toLowerCase()) === -1){
+				all[i].classList.add('dontShow');
+			}
+		}
+	}
+}
+
+searchBar.onkeyup = search;
