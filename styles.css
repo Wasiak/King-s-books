@@ -1,5 +1,6 @@
 #list {
 	width: 1000px;
+	float: left;
 }
 .title {
 	width: 300px;
@@ -54,4 +55,14 @@ a {
 	height: 90%;
 	/*width: 30%;*/
 	opacity: 1;
+}
+.searchBar {
+	border:solid black 2px;
+	border-radius: 3px;
+	float: left;
+	margin-left: 50px;
+	display: inline-block;
+}
+.dontShow {
+	display: none;
 }
