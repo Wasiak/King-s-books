@@ -58,21 +58,20 @@ category.classList.add('category');
 for (i = 0; i < collection.length; i++){
 	mainTable.appendChild(new Book(collection[i].id, collection[i].title, collection[i].pl, collection[i].year, collection[i].pages, collection[i].link, true));	
 }
-//  branch Big_thumb do pracy nad powiekszaniem kliknietych miniaturek okladek
-
-
-var showBig = function(id){
 	var lightbox = document.createElement('div');
 	lightbox.classList.add('lightbox');
 	document.body.appendChild(lightbox);
-	// var photo = document.createElement('div');
-	// lightbox.appendChild(photo);
 	var picture = document.createElement('img');
-	picture.src = 'pics/' + id + '.jpg'; 
 	picture.classList.add('picture');
 	lightbox.appendChild(picture);
+var showBig = function(id){
+	picture.src = 'pics/' + id + '.jpg'; 
+	picture.classList.add('visible');
+	lightbox.classList.add('visible');
 	lightbox.onclick = function(event){
 		event.preventDefault();
-		document.body.removeChild(lightbox);
+		lightbox.classList.remove('visible');
+		picture.classList.remove('visible');
+		picture.src = '';
 	}
 }
