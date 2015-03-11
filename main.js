@@ -1,4 +1,4 @@
-var Book = function(id, title, pl, year, pages, link, nolink){
+var Book = function(id, title, pl, year, pages, link, nolink,favorities){
 	var tr = document.createElement('tr');
 	tr.id = id;
 	var pic = document.createElement('td');
@@ -45,6 +45,9 @@ var Book = function(id, title, pl, year, pages, link, nolink){
 	tr.appendChild(pa);
 	pa.classList.add('year');
 	pa.innerHTML = pages;
+	if (favorities){
+		tr.classList.add('favorities');
+	}
 
 	return tr;
 }
@@ -56,7 +59,7 @@ mainTable.appendChild(category);
 category.classList.add('category');
 
 for (i = 0; i < collection.length; i++){
-	mainTable.appendChild(new Book(collection[i].id, collection[i].title, collection[i].pl, collection[i].year, collection[i].pages, collection[i].link, true));
+	mainTable.appendChild(new Book(collection[i].id, collection[i].title, collection[i].pl, collection[i].year, collection[i].pages, collection[i].link, true, collection[i].favorities));
 }
 	var lightbox = document.createElement('div');
 	lightbox.classList.add('lightbox');
