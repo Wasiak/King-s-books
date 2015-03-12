@@ -59,7 +59,8 @@ mainTable.appendChild(category);
 category.classList.add('category');
 
 for (i = 0; i < collection.length; i++){
-	mainTable.appendChild(new Book(collection[i].id, collection[i].title, collection[i].pl, collection[i].year, collection[i].pages, collection[i].link, true, collection[i].favorities));
+	// new attribute is added to the collection list, where the DOM node will be stored
+	collection[i].element = mainTable.appendChild(new Book(collection[i].id, collection[i].title, collection[i].pl, collection[i].year, collection[i].pages, collection[i].link, true, collection[i].favorities));
 }
 	var lightbox = document.createElement('div');
 	lightbox.classList.add('lightbox');
@@ -95,7 +96,7 @@ var search = function(){
 		var pli = all[i].getElementsByTagName('a')[1];
 		if (searchBar.value){
 			console.log(tl.innerHTML.toLowerCase(), searchBar.value.toLowerCase(), tl.innerHTML.toLowerCase().indexOf(searchBar.value.toLowerCase()));
-			if(tl.innerHTML.toLowerCase().indexOf(searchBar.value.toLowerCase()) === -1 && 
+			if(tl.innerHTML.toLowerCase().indexOf(searchBar.value.toLowerCase()) === -1 &&
 				pli.innerHTML.toLowerCase().indexOf(searchBar.value.toLowerCase()) === -1){
 				all[i].classList.add('dontShow');
 			}
@@ -103,4 +104,35 @@ var search = function(){
 	}
 }
 
+// sort filter
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FArray%2Fsort
+var sortByPageFilter = function(a, b) {
+	return a.pages - b.pages;
+};
+
+var rebuildTable = function() {
+	// clear the main table. all the dom nodes will be removed
+	mainTable.innerHTML = '';
+	// add the header again, it's not part of the 'collection' so it was removed.
+	// this code is duplicated, and it shouldn't
+	var category = new Book('category', 'Title', 'Polish title', 'Year', 'Pages');
+	mainTable.appendChild(category);
+	category.classList.add('category');
+
+	// now add all the nodes again
+	for (var book in collection) {
+		mainTable.appendChild(collection[book].element);
+	}
+};
+
+// When button is clicked
+document.getElementById('sortByPages').addEventListener('click', function(){
+	// sport the collection array
+	collection.sort(sortByPageFilter);
+	// and rebuild table
+	rebuildTable();
+});
+
 searchBar.onkeyup = search;
+
+// sorting
