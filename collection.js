@@ -88,7 +88,8 @@ var collection = [
 		'pl' : 'To',
 		'year' : '1986',
 		'pages' : '1104',
-		'link' : 'http://stephenking.pl/ksiazki_to_01.html'
+		'link' : 'http://stephenking.pl/ksiazki_to_01.html',
+		'favorities' :'true'
 	},
 	{
 		'id' : 'tow2',
@@ -157,7 +158,7 @@ var collection = [
 	{
 		'id' : 'inso',
 		'title' : 'Insomnia',
-		'pl' : 'bezsenność',
+		'pl' : 'Bezsenność',
 		'year' : '1994',
 		'pages' : '656',
 		'link' : 'http://stephenking.pl/ksiazki_bezsennosc_01.html'
@@ -200,7 +201,8 @@ var collection = [
 		'pl' : 'Łowca snów',
 		'year' : '2001',
 		'pages' : '768',
-		'link' : 'http://stephenking.pl/ksiazki_lowcasnow_01.html'
+		'link' : 'http://stephenking.pl/ksiazki_lowcasnow_01.html',
+		'favorities' :'true'
 	},
 	{
 		'id' : 'czarny',
@@ -264,7 +266,8 @@ var collection = [
 		'pl' : 'Ręka mistrza',
 		'year' : '2008',
 		'pages' : '640',
-		'link' : 'http://stephenking.pl/ksiazki_reka_01.html'
+		'link' : 'http://stephenking.pl/ksiazki_reka_01.html',
+		'favorities' :'true'		
 	},
 	{
 		'id' : 'zachod',
