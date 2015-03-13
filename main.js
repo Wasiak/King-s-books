@@ -157,17 +157,17 @@ var rebuildTable = function() {
 		mainTable.appendChild(collection[book].element);
 	}
 };
-var desc = false; //malejaco = fałsz
+var pagesDesc = false; //malejaco = fałsz
 // When button is clicked
 document.getElementById('sortByPages').addEventListener('click', function(){
 	// sport the collection array
 	collection = collection.sort(sortByPageFilter);
-	if (desc){
+	if (pagesDesc){
 		collection = collection.reverse();
 	}
 	// and rebuild table
 	rebuildTable();
-	desc = !desc;
+	pagesDesc = !pagesDesc;
 });
 
 searchBar.onkeyup = search;
@@ -176,4 +176,16 @@ searchBar.onkeyup = search;
 
 // 4 buttony kazdy an inna kategorie sortowania
 // dla kazdej inny filtr
-// i inna flaga 'desc' 
+// i inna flaga 'desc'
+var sortByYearFilter = function(a, b) {
+	return a.year - b.year;
+} 
+var yearDesc = false;
+document.getElementById('sortByYear').addEventListener('click', function(){
+		collection = collection.sort(sortByYearFilter);
+	if (yearDesc){
+		collection = collection.reverse();
+	}
+	rebuildTable();
+	yearDesc = !yearDesc;
+})
