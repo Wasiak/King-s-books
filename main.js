@@ -188,4 +188,36 @@ document.getElementById('sortByYear').addEventListener('click', function(){
 	}
 	rebuildTable();
 	yearDesc = !yearDesc;
-})
+});
+
+var sortByTitleFilter = function(a, b){
+	var a = a.title.toLowerCase();
+	var b = b.title.toLowerCase();
+	if (a < b){ return -1}
+	if (a > b){ return 1}	
+}
+var titleDesc = false;
+document.getElementById('sortByTitle').addEventListener('click', function(){
+	collection = collection.sort(sortByTitleFilter);
+	if (titleDesc){
+		collection = collection.reverse();
+	}
+	rebuildTable();
+	titleDesc = !titleDesc;			
+});
+
+var sortByPlTitleFilter = function(a, b){
+	var a = a.pl.toLowerCase();
+	var b = b.pl.toLowerCase();
+	if (a < b){ return -1}
+	if (a > b){ return 1}	
+}
+var plTitleDesc = false;
+document.getElementById('sortByPlTitle').addEventListener('click', function(){
+	collection = collection.sort(sortByPlTitleFilter);
+	if (plTitleDesc){
+		collection = collection.reverse();
+	}
+	rebuildTable();
+	plTitleDesc = !plTitleDesc;			
+});
