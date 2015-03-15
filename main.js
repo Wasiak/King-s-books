@@ -139,24 +139,23 @@ var pageCol;
 
 var getPageSorter = function(){
 	console.log('odpalam funkcje getPageSorter');
-row = document.getElementsByTagName('tr');		//every row
-categoryRow = row[0];		// first row (category)
-cols = categoryRow.getElementsByTagName('td')		//every td in first row
-pageCol = cols[4];			// 5th column in category row (paGE COL)
-}
+	row = document.getElementsByTagName('tr');		//every row
+	categoryRow = row[0];		// first row (category)
+	cols = categoryRow.getElementsByTagName('td')		//every td in first row
+	pageCol = cols[4];			// 5th column in category row (paGE COL)
+	pageCol.addEventListener('click', function(){
+		// sport the collection array
+		collection = collection.sort(sortByPageFilter);
+		if (pagesDesc){
+			collection = collection.reverse();
+		}
+		// and rebuild table
+		rebuildTable();
+		pagesDesc = !pagesDesc;
+	});
+};
 																						// work only once ;/ ??!
 getPageSorter();
-pageCol.addEventListener('click', function(){
-	// sport the collection array
-	collection = collection.sort(sortByPageFilter);
-	if (pagesDesc){
-		collection = collection.reverse();
-	}
-	// and rebuild table
-	rebuildTable();
-	pagesDesc = !pagesDesc;
-	//getPageSorter();
-});
 
 searchBar.onkeyup = search;
 
@@ -164,7 +163,7 @@ searchBar.onkeyup = search;
 
 var sortByYearFilter = function(a, b) {
 	return a.year - b.year;
-} 
+}
 var yearDesc = false;
 document.getElementById('sortByYear').addEventListener('click', function(){
 		collection = collection.sort(sortByYearFilter);
@@ -179,7 +178,7 @@ var sortByTitleFilter = function(a, b){
 	var a = a.title.toLowerCase();
 	var b = b.title.toLowerCase();
 	if (a < b){ return -1}
-	if (a > b){ return 1}	
+	if (a > b){ return 1}
 }
 var titleDesc = false;
 document.getElementById('sortByTitle').addEventListener('click', function(){
@@ -188,14 +187,14 @@ document.getElementById('sortByTitle').addEventListener('click', function(){
 		collection = collection.reverse();
 	}
 	rebuildTable();
-	titleDesc = !titleDesc;			
+	titleDesc = !titleDesc;
 });
 
 var sortByPlTitleFilter = function(a, b){
 	var a = a.pl.toLowerCase();
 	var b = b.pl.toLowerCase();
 	if (a < b){ return -1}
-	if (a > b){ return 1}	
+	if (a > b){ return 1}
 }
 var plTitleDesc = false;
 document.getElementById('sortByPlTitle').addEventListener('click', function(){
@@ -204,5 +203,5 @@ document.getElementById('sortByPlTitle').addEventListener('click', function(){
 		collection = collection.reverse();
 	}
 	rebuildTable();
-	plTitleDesc = !plTitleDesc;			
+	plTitleDesc = !plTitleDesc;
 });
