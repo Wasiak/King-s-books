@@ -128,14 +128,24 @@ var rebuildTable = function() {
 	for (var book in collection) {
 		mainTable.appendChild(collection[book].element);
 	}
+	getPageSorter();			// should  get new values for row,cols... every time table is rebuilded
 };
 var pagesDesc = false; //malejaco = fałsz
 // When button is clicked
-var row = document.getElementsByTagName('tr');		//every row
-var categoryRow = row[0];		// first row (category)
-var cols = categoryRow.getElementsByTagName('td')		//every td in first row
-var pageCol = cols[4];			// 5th column in category row (paGE COL)
+var row;
+var categoryRow;
+var cols;
+var pageCol;
+
+var getPageSorter = function(){
+	console.log('odpalam funkcje getPageSorter');
+row = document.getElementsByTagName('tr');		//every row
+categoryRow = row[0];		// first row (category)
+cols = categoryRow.getElementsByTagName('td')		//every td in first row
+pageCol = cols[4];			// 5th column in category row (paGE COL)
+}
 																						// work only once ;/ ??!
+getPageSorter();
 pageCol.addEventListener('click', function(){
 	// sport the collection array
 	collection = collection.sort(sortByPageFilter);
@@ -145,6 +155,7 @@ pageCol.addEventListener('click', function(){
 	// and rebuild table
 	rebuildTable();
 	pagesDesc = !pagesDesc;
+	//getPageSorter();
 });
 
 searchBar.onkeyup = search;
