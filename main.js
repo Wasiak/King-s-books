@@ -108,34 +108,6 @@ var search = function(){
 searchBar.onkeyup = search;
 
 // Branch 'sorting' to working on making list sortable
-// At the begining I'll try to write a code to sort just one thing
-// To be easier it  will be number of pages 
-// probably this number is unique for every book and easy to check if its working
-
-var pageSortUp = [];
-
-var sort = function(){
-	var all = document.getElementsByTagName('tr');
-	while (all.lenght >= 1){
-	for (i = 1; i < all.length; i++) {
-		var page = all[i].getElementsByClassName('year')[2];
-		var minPage = 100000;
-			if (parseInt(page.innerHTML, 10) < minPage){
-				minPage = parseInt(page.innerHTML, 10);
-				var checked = all.shift();
-				pageSortUp.push(checked);
-			}
-
-	}
-	}			//kurwa, nie ma prawa dzialac !!
-}
-
-// jak juz mam najmniejszy to jeb go do pageSortUp na [0] i wyjebac z all[] zeby sprawdzac kolejne
-//  ale to all chyba global powinno byc ??
-
-// a moze najpierw posortowac parseInt a potem szukac ktora liczba odpowiada page.value  ??
-
-// [elpodrzedny].parentNode.id wyciaga id el nadrzednego
 
 // sort filter
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FArray%2Fsort
@@ -159,7 +131,12 @@ var rebuildTable = function() {
 };
 var pagesDesc = false; //malejaco = fałsz
 // When button is clicked
-document.getElementById('sortByPages').addEventListener('click', function(){
+var row = document.getElementsByTagName('tr');		//every row
+var categoryRow = row[0];		// first row (category)
+var cols = categoryRow.getElementsByTagName('td')		//every td in first row
+var pageCol = cols[4];			// 5th column in category row (paGE COL)
+																						// work only once ;/ ??!
+pageCol.addEventListener('click', function(){
 	// sport the collection array
 	collection = collection.sort(sortByPageFilter);
 	if (pagesDesc){
@@ -174,9 +151,6 @@ searchBar.onkeyup = search;
 
 // sorting
 
-// 4 buttony kazdy an inna kategorie sortowania
-// dla kazdej inny filtr
-// i inna flaga 'desc'
 var sortByYearFilter = function(a, b) {
 	return a.year - b.year;
 } 
