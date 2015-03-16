@@ -16,13 +16,14 @@ table {
 	border-collapse: collapse;
 }
 .year {
-	width: 100px;
+	width: 100px;	
 }
 .category {
 	font-size: 30px;
 	font-weight: bold;
 	background-color: lightgrey;
 	color: red;
+		cursor:pointer;
 }
 a {
 	text-decoration: none;
@@ -90,6 +91,8 @@ a {
 .favorities {
 	background-color: #F7FE2E;
 }
-
+.pointer {
+	cursor:pointer;
+}
 
 
