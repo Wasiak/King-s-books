@@ -1,6 +1,8 @@
 #list {
-	width: 1000px;
+/*	width: 1000px;
 	float:left;
+	margin: auto;*/
+	display: inline-block;
 }
 .title {
 	width: 300px;
@@ -14,6 +16,8 @@ td {
 }
 table {
 	border-collapse: collapse;
+	background-color: white;
+	opacity: 0.8;
 }
 .year {
 	width: 100px;	
@@ -81,9 +85,11 @@ a {
 .searchBar {
 	border:solid black 2px;
 	border-radius: 3px;
-	float: left;
-	margin-left: 50px;
+	/*float: right;*/
+	/*margin-left: 50px;*/
 	display: inline-block;
+	position: absolute;
+	margin-left:50px;
 }
 .dontShow {
 	display: none;
@@ -94,5 +100,12 @@ a {
 .pointer {
 	cursor:pointer;
 }
-
-
+body {
+	text-align: center;
+	background-image: url(pics/background.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+}
+p {
+	font-size: 40px;
+}
