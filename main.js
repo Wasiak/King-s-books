@@ -225,3 +225,6 @@ var getPlTitleSorter = function(){
 });
 }
 getPlTitleSorter();
+
+var header = document.getElementById('header');
+header.innerHTML = collection.length + ' King\'s books I read';

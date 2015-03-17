@@ -109,4 +109,5 @@ body {
 p {
 	font-family: 'Denk One' , sans-serif;
 	font-size: 60px;
+	text-shadow: 3px 3px 3px;
 }
