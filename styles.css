@@ -100,23 +100,36 @@ a {
 .pointer {
 	cursor:pointer;
 }
+/*body {
+	text-align: center;
+	background-image: url(pics/background.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+}*/
+@media (min-width: 360px){
+p {
+	font-family: 'Denk One' , sans-serif;
+	font-size: 60px;
+	text-shadow: 3px 3px 3px;
+}
 body {
 	text-align: center;
 	background-image: url(pics/background.jpg);
 	background-attachment: fixed;
 	background-size: cover;
 }
-@media (min-width: 500px){
-p {
-	font-family: 'Denk One' , sans-serif;
-	font-size: 60px;
-	text-shadow: 3px 3px 3px;
 }
-}
-@media (max-width: 500px){
+@media (max-width: 360px){
 p {	
 	font-family: 'Denk One' , sans-serif;
 	font-size: 30px;
 	text-shadow: 2px 2px 2px;
+}
+body {
+	text-align: center;
+	background-image: url(pics/background.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	/*width: 100%;*/
 }	
 }
