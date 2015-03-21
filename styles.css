@@ -106,8 +106,17 @@ body {
 	background-attachment: fixed;
 	background-size: cover;
 }
+@media (min-width: 500px){
 p {
 	font-family: 'Denk One' , sans-serif;
 	font-size: 60px;
 	text-shadow: 3px 3px 3px;
+}
+}
+@media (max-width: 500px){
+p {	
+	font-family: 'Denk One' , sans-serif;
+	font-size: 30px;
+	text-shadow: 2px 2px 2px;
+}	
 }
