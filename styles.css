@@ -1,12 +1,5 @@
-#list {
-/*	width: 1000px;
-	float:left;
-	margin: auto;*/
-	display: inline-block;
-}
-.title {
-	width: 300px;
-}
+
+
 tr {
 	height:50px;
 }
@@ -19,16 +12,8 @@ table {
 	background-color: white;
 	opacity: 0.8;
 }
-.year {
-	width: 100px;	
-}
-.category {
-	font-size: 30px;
-	font-weight: bold;
-	background-color: lightgrey;
-	color: red;
-		cursor:pointer;
-}
+
+
 a {
 	text-decoration: none;
 	color: black;
@@ -82,15 +67,7 @@ a {
 }
 
 
-.searchBar {
-	border:solid black 2px;
-	border-radius: 3px;
-	/*float: right;*/
-	/*margin-left: 50px;*/
-	display: inline-block;
-	position: absolute;
-	margin-left:50px;
-}
+
 .dontShow {
 	display: none;
 }
@@ -107,6 +84,9 @@ a {
 	background-size: cover;
 }*/
 @media (min-width: 360px){
+#list {
+	display: inline-block;
+}	
 p {
 	font-family: 'Denk One' , sans-serif;
 	font-size: 60px;
@@ -118,8 +98,34 @@ body {
 	background-attachment: fixed;
 	background-size: cover;
 }
+.category {
+	font-size: 30px;
+	font-weight: bold;
+	background-color: lightgrey;
+	color: red;
+		cursor:pointer;
+}
+.year {
+	width: 100px;	
+}
+.title {
+	width: 300px;
+}
+.searchBar {
+	border:solid black 2px;
+	border-radius: 3px;
+	/*float: right;*/
+	/*margin-left: 50px;*/
+	display: inline-block;
+	position: absolute;
+	margin-left:50px;
+}
 }
 @media (max-width: 360px){
+#list {
+	display: inline-block;
+	margin: 0;
+}	
 p {	
 	font-family: 'Denk One' , sans-serif;
 	font-size: 30px;
@@ -131,5 +137,27 @@ body {
 	background-attachment: fixed;
 	background-size: cover;
 	/*width: 100%;*/
+}
+.category {
+	font-size: 15px;
+	font-weight: bold;
+	background-color: lightgrey;
+	color: red;
+		cursor:pointer;
+}
+.year {
+	width: 45px;	
+}
+.title {
+	width: 100px;
 }	
+.searchBar {
+	border:solid black 2px;
+	border-radius: 3px;
+	/*float: right;*/
+	/*margin-left: 50px;*/
+	/*display: inline-block;*/
+	/*position: absolute;*/
+	margin-left:-50px;
+}
 }
