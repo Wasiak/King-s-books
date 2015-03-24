@@ -3,10 +3,12 @@ var Book = function(id, title, pl, year, pages, link, nolink,favorities){		//cre
 	tr.id = id;										// give new row id
 	var pic = document.createElement('td');			// creating new column in our row 
 	tr.appendChild(pic);							// appendin pic to our row for cover
-	pic.classList.add('year');						
+	pic.classList.add('year');
+	pic.classList.add('picRes');						
 	var t = document.createElement('td');			// creating new column  in our row  for title
 	tr.appendChild(t);
 	t.classList.add('title');
+	t.classList.add('titRes');
 	if (nolink){									// if nolink === true -> full row with every book property	
 		var img = document.createElement('img');	// creating new el img	
 		img.src = 'pics/' + id + '.jpg';			//img is picture of cover with  name same as id of our row
@@ -25,6 +27,7 @@ var Book = function(id, title, pl, year, pages, link, nolink,favorities){		//cre
 		var p = document.createElement('td');		// creating new column for polish title
 		tr.appendChild(p);
 		p.classList.add('title');
+		p.classList.add('pltitRes');
 		var pli = document.createElement('a');		// link for book site for polish title
 		p.appendChild(pli);
 		pli.href = link;							// same link as in title
@@ -35,15 +38,18 @@ var Book = function(id, title, pl, year, pages, link, nolink,favorities){		//cre
 		var p = document.createElement('td');
 		tr.appendChild(p);
 		p.classList.add('title');
+		p.classList.add('pltitRes');
 		p.innerHTML = pl;							// just polish title without link
 	}
 	var y = document.createElement('td');			// creating new column for year
 	tr.appendChild(y);
 	y.classList.add('year');
+	y.classList.add('yearRes');
 	y.innerHTML = year;								// innerHTML === year from collection.js
 	var pa = document.createElement('td');			// creating new column for number of pages
 	tr.appendChild(pa);
 	pa.classList.add('year');
+	pa.classList.add('yearRes');
 	pa.innerHTML = pages;							// number of pages from collection.js
 	if (favorities){								// if any elemento of array collection has property favorities
 		tr.classList.add('favorities');				// give him class favorities

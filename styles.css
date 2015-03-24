@@ -1,12 +1,7 @@
 
 
-tr {
-	height:50px;
-}
-td {
-	text-align: center;
-	border: solid  black;
-}
+
+
 table {
 	border-collapse: collapse;
 	background-color: white;
@@ -18,11 +13,7 @@ a {
 	text-decoration: none;
 	color: black;
 }
-.thumb {
-	height: 46px;
-	margin-top: 4px;
-	cursor: pointer;
-}
+
 .lightbox {
 	width: 100%;
 	height: 100%;
@@ -84,6 +75,18 @@ a {
 	background-size: cover;
 }*/
 @media (min-width: 360px){
+tr {
+	height:50px;
+}	
+td {
+	text-align: center;
+	border: solid  black;
+}
+.thumb {
+	height: 46px;
+	margin-top: 4px;
+	cursor: pointer;
+}	
 #list {
 	display: inline-block;
 }	
@@ -122,6 +125,20 @@ body {
 }
 }
 @media (max-width: 360px){
+tr {
+	/*height:50px;*/
+	border-bottom: solid black 4px;
+}	
+td {
+	text-align: center;
+	/*border: solid  black;*/
+}	
+.thumb {
+	/*height: 46px;*/
+	width: 100%;
+	margin-top: 4px;
+	cursor: pointer;
+}
 #list {
 	display: inline-block;
 	margin: 0;
@@ -146,10 +163,13 @@ body {
 		cursor:pointer;
 }
 .year {
-	width: 45px;	
+	width: 45px;
+	height: 40px;
+	margin-top: 60px;	
 }
 .title {
-	width: 100px;
+	width: 200px;
+	height: 50px;
 }	
 .searchBar {
 	border:solid black 2px;
@@ -159,5 +179,21 @@ body {
 	/*display: inline-block;*/
 	/*position: absolute;*/
 	margin-left:-50px;
+}
+.picRes {
+	width: 100px;
+}
+.titRes {
+	display: inline-block;
+	float: left;
+	font-size: 30px;
+}
+.yearRes {
+	display: inline-block;
+	/*float:right;*/
+}
+.pltitRes {
+	display: block;
+	font-size: 15px;
 }
 }
