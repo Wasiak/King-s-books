@@ -156,6 +156,7 @@ body {
 	/*width: 100%;*/
 }
 .category {
+	display: none;
 	font-size: 15px;
 	font-weight: bold;
 	background-color: lightgrey;
@@ -163,12 +164,12 @@ body {
 		cursor:pointer;
 }
 .year {
-	width: 45px;
+	width: 20%;
 	height: 40px;
 	margin-bottom: 10px;	
 }
 .title {
-	width: 200px;
+	width: 100%;
 	/*height: 50px;*/
 	/*box-sizing: content-box;*/
 }	
@@ -182,19 +183,22 @@ body {
 	margin-left:-50px;
 }
 .picRes {
-	width: 100px;
+	width: 34%;
 }
 .titRes {
 	display: inline-block;
-	float: left;
+	/*float: left;*/
 	font-size: 30px;
+	min-height: 50px;
 }
 .yearRes {
 	display: inline-block;
+	text-align: center bottom;
+	padding-bottom: 5px;
 	/*float:right;*/
 }
 .pltitRes {
-	display: block;
+	display: inline-block;
 	font-size: 15px;
 }
 }
