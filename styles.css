@@ -74,7 +74,7 @@ a {
 	background-attachment: fixed;
 	background-size: cover;
 }*/
-@media (min-width: 360px){
+@media (min-width: 461px){
 tr {
 	height:50px;
 }	
@@ -124,7 +124,35 @@ body {
 	margin-left:50px;
 }
 }
-@media (max-width: 360px){
+@media (min-width: 391px) and (max-width: 460px){
+body {
+	text-align: center;
+	background-image: url(pics/background.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+}	
+	.category {
+	font-size: 20px;
+	font-weight: bold;
+	background-color: lightgrey;
+	color: red;
+		cursor:pointer;
+}	
+p {
+	font-family: 'Denk One' , sans-serif;
+	font-size: 45px;
+	text-shadow: 3px 3px 3px;
+}
+.picRes {
+	width: 34%;
+}
+.thumb {
+	height: 46px;
+	margin-top: 4px;
+	cursor: pointer;
+}	
+}
+@media (max-width: 390px){
 tr {
 	/*height:50px;*/
 	border-bottom: solid black 4px;
