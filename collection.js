@@ -332,5 +332,13 @@ var collection = [
 		'year' : '2014',
 		'pages' : '536',
 		'link' : 'http://stephenking.pl/ksiazki_przebudzenie_01.html'
+	},
+	{
+		'id' : 'znalezione',
+		'title' : 'Finders Keepers',
+		'pl' : 'Znalezione nie kradzione',
+		'year' : '2015',
+		'pages' : '544',
+		'link' : 'http://stephenking.pl/ksiazki_znalezione_01.html'
 	}
 ];
