@@ -340,5 +340,13 @@ var collection = [
 		'year' : '2015',
 		'pages' : '544',
 		'link' : 'http://stephenking.pl/ksiazka/znalezione-nie-kradzione/'
+	},
+	{
+		'id' : 'bazar',
+		'title' : ' The Bazaar Of Bad Dreams',
+		'pl' : 'Bazar złych snów',
+		'year' : '2015',
+		'pages' : '672',
+		'link' : 'http://stephenking.pl/ksiazka/bazar-zlych-snow/'
 	}
 ];
