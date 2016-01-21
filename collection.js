@@ -348,5 +348,13 @@ var collection = [
 		'year' : '2015',
 		'pages' : '672',
 		'link' : 'http://stephenking.pl/ksiazka/bazar-zlych-snow/'
+	},
+	{
+		'id' : 'salem',
+		'title' : 'Salem’s Lot',
+		'pl' : 'Miasteczko Salem',
+		'year' : '1975',
+		'pages' : '528',
+		'link' : 'http://stephenking.pl/ksiazka/miasteczko-salem/'
 	}
 ];
