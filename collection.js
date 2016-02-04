@@ -356,5 +356,13 @@ var collection = [
 		'year' : '1975',
 		'pages' : '528',
 		'link' : 'http://stephenking.pl/ksiazka/miasteczko-salem/'
+	},
+	{
+		'id' : 'cmetarz',
+		'title': 'Pet Sematary',
+		'pl' : 'Cmętarz zwieżąt',
+		'year' : '1983',
+		'pages' : '424',
+		'link' : 'http://stephenking.pl/ksiazka/cmetarz-zwiezat/'
 	}
 ];
