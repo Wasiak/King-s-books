@@ -364,5 +364,13 @@ var collection = [
 		'year' : '1983',
 		'pages' : '424',
 		'link' : 'http://stephenking.pl/ksiazka/cmetarz-zwiezat/'
+	},
+	{
+		'id' : 'koniecwarty',
+		'title': 'End of Watch',
+		'pl' : 'Koniec warty',
+		'year' : '2016',
+		'pages' : '480',
+		'link' : 'http://stephenking.pl/ksiazka/koniec-warty/'
 	}
 ];
