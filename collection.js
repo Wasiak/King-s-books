@@ -372,5 +372,13 @@ var collection = [
 		'year' : '2016',
 		'pages' : '480',
 		'link' : 'http://stephenking.pl/ksiazka/koniec-warty/'
+	},
+	{
+		'id' : 'chudszy',
+		'title': 'Thinner',
+		'pl' : 'Chudszy',
+		'year' : '1984',
+		'pages' : '408',
+		'link' : 'http://stephenking.pl/ksiazka/chudszy/'
 	}
 ];
