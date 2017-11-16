@@ -388,5 +388,13 @@ var collection = [
     'year' : '1980',
     'pages' : '512',
     'link' : 'http://stephenking.pl/ksiazka/podpalaczka/'
+  },
+  {
+    'id' : 'czarnabezgwiezdnanoc',
+    'title': 'Full Dark No Stars',
+    'pl' : 'Czarna bezgwiezdna noc',
+    'year' : '2010',
+    'pages' : '512',
+    'link' : 'http://stephenking.pl/ksiazka/czarna-bezgwiezdna-noc/'
   }
 ];
