@@ -396,5 +396,13 @@ var collection = [
     'year' : '2010',
     'pages' : '512',
     'link' : 'http://stephenking.pl/ksiazka/czarna-bezgwiezdna-noc/'
+  },
+  {
+    'id' : 'spiacekrolewny',
+    'title': 'Sleeping Beauties',
+    'pl' : 'Śpiące królewny',
+    'year' : '2017',
+    'pages' : '736',
+    'link' : 'http://stephenking.pl/ksiazka/spiace-krolewny/'
   }
 ];
