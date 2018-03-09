@@ -404,5 +404,13 @@ var collection = [
     'year' : '2017',
     'pages' : '736',
     'link' : 'http://stephenking.pl/ksiazka/spiace-krolewny/'
+  },
+  {
+    'id' : 'gwendy',
+    'title': 'Gwendy’s Button Box',
+    'pl' : 'Pudełko z guzikami Gwendy',
+    'year' : '2017',
+    'pages' : '176',
+    'link' : 'http://stephenking.pl/ksiazka/pudelko-z-guzikami-gwendy/'
   }
 ];
