@@ -412,5 +412,13 @@ var collection = [
     'year' : '2017',
     'pages' : '176',
     'link' : 'http://stephenking.pl/ksiazka/pudelko-z-guzikami-gwendy/'
+  },
+  {
+    'id' : 'outsider',
+    'title': 'The Outsider',
+    'pl' : 'Outsider',
+    'year' : '2018',
+    'pages' : '640',
+    'link' : 'http://stephenking.pl/ksiazka/outsider/'
   }
 ];
