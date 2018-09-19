@@ -420,5 +420,13 @@ var collection = [
     'year' : '2018',
     'pages' : '640',
     'link' : 'http://stephenking.pl/ksiazka/outsider/'
+  },
+  {
+    'id' : 'bartdawes',
+    'title': 'Roadwork',
+    'pl' : 'Ostatni bastion Barta Dawesa',
+    'year' : '1981',
+    'pages' : '352',
+    'link' : 'http://stephenking.pl/ksiazka/ostatni-bastion-barta-dawesa/'
   }
 ];
