@@ -428,5 +428,29 @@ var collection = [
     'year' : '1981',
     'pages' : '352',
     'link' : 'http://stephenking.pl/ksiazka/ostatni-bastion-barta-dawesa/'
+  },
+  {
+    'id' : 'smok',
+    'title': 'Eyes of the Dragon',
+    'pl' : 'Oczy smoka',
+    'year' : '1987',
+    'pages' : '400',
+    'link' : 'http://stephenking.pl/ksiazka/oczy-smoka/'
+  },
+  {
+    'id' : 'uniesienie',
+    'title': 'Elevation',
+    'pl' : 'Uniesienie',
+    'year' : '2018',
+    'pages' : '176',
+    'link' : 'http://stephenking.pl/ksiazka/uniesienie/'
+  },
+  {
+    'id' : 'blaze',
+    'title': 'Blaze',
+    'pl' : 'Blaze',
+    'year' : '2007',
+    'pages' : '320',
+    'link' : 'http://stephenking.pl/ksiazka/blaze/'
   }
 ];
